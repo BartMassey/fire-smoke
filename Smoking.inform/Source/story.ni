@@ -40,9 +40,13 @@ Every turn when a fire source is aflame:
 
 Chapter - Common Fire Sources
 
+An ignition source is a kind of fire source.
+
 Section - Lighters
 
-A lighter is a kind of fire source. The description is usually "A generic butane-fueled cigarette lighter." A lighter can be full. It is usually full.
+A lighter is a kind of ignition source. The description is usually "A generic butane-fueled cigarette lighter." The lit turn duration of a lighter is usually 6.
+
+A lighter can be full. It is usually full.
 
 Check an actor lighting a lighter: If the noun is not full, instead say "[The noun] appears to be empty."
 
@@ -50,7 +54,7 @@ Section - Safety Matches
 
 [Example 407 -  The Cow Exonerated in the Inform 7 Recipe Book contains an implementation similar to mine that I found after writing this. It points out that "matches" is problematic; I went with "wooden match" instead of their solution.]
 
-A wooden match is a kind of fire source. The description is usually "A wooden stick with a phosphorus tip." The printed name of a wooden match is "match". A wooden match is privately-named. Understand "match" as a wooden match. 
+A wooden match is a kind of ignition source. The description is usually "A wooden stick with a phosphorus tip." The printed name of a wooden match is "match". A wooden match is privately-named. Understand "match" as a wooden match. 
 
 A wooden match can be burnt out. It is usually not burnt out. A wooden match has a text called the burnt out description. The burnt out description is usually "This blackened wooden stick was once a lit match.".
 
@@ -60,11 +64,23 @@ After an actor extinguishing a wooden match: if the burnt out description of the
 
 Part - Smoking
 
-A smokable is a kind of thing.
+A smokable is a kind of fire source. The lit turn duration of a smokable is usually 10. The lit description is usually "A curl of smoke issues from [the noun]."
+
+A smokable has a text called the smoking description. The smoking description is usually "[if the person asked is the player]You puff[otherwise][The person asked] puffs[end if] gently on [the noun]."
+
+Check an actor lighting a smokable when the person asked is carrying an aflame smokable: instead say "You already have a lit [random aflame smokable carried by the player]."
+
+Check an actor lighting a smokable: if the actor is not carrying an aflame ignition source, instead say "You need some way to light [the noun]."
 
 Chapter - The Act Of Smoking
 
-Smoking is an action applying to one thing. Understand "smoke [smokable]" as smoking.
+Smoking is an action applying to one thing. Understand "smoke [smokable]" or "puff on/-- [smokable]" as smoking. Understand "smoke" or "puff on/--" as smoking.
+
+Rule for supplying a missing noun while smoking: if the person asked is carrying an aflame smokable, now the noun is a random aflame smokable carried by the person asked; otherwise say "Got a smoke?"
+
+Check smoking a smokable: if the noun is not aflame, instead say "You will have to light [the noun] before you can smoke it."
+
+Carry out an actor smoking a smokable: say the smoking description of the noun.
 
 Chapter - Common Smokables
 
@@ -85,3 +101,5 @@ Part - Example
 The Smoking Room is a room.
 
 The player carries a lighter and a wooden match. The player carries a cigarette, a cigar and a pipe.
+
+Bob is a man in the smoking room. Bob carries a pipe and a lighter.
