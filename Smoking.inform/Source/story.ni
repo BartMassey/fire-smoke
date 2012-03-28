@@ -2,19 +2,19 @@
 
 Part - Making Fire
 
-A fire source is a kind of thing. A fire source can be alight. It is usually not alight.
+A fire source is a kind of thing. A fire source can be aflame. It is usually not aflame.
 
 A fire source has a number called the lit turn duration. The lit turn duration is usually 3. A fire source has a number called the remaining turns lit.
 
 A fire source has a text called the lit description. The lit description is usually "A bright, smoky flame issues from [the noun]."
 
-After examining an alight fire source: say the lit description of the noun.
+After examining an aflame fire source: say the lit description of the noun.
 
 Chapter - Lighting a Fire Source
 
 Lighting is an action applying to one thing. Understand "light [fire source]" or "strike [fire source]" or "ignite [fire source]" as lighting.
 
-Carry out an actor lighting a fire source: now the noun is alight; now the remaining turns lit of the noun is one plus the lit turn duration of the noun.
+Carry out an actor lighting a fire source: now the noun is aflame; now the remaining turns lit of the noun is one plus the lit turn duration of the noun.
 
 After an actor lighting a fire source: say the lit description of the noun.
 
@@ -22,16 +22,16 @@ Chapter - Extinguishing a Fire Source
 
 Extinguishing is an action applying to one thing. Understand "extinguish [fire source]" or "put out [fire source]" or "smother [fire source]" as extinguishing.
 
-Check an actor extinguishing a not alight fire source: instead say "[The noun] is not aflame."
+Check an actor extinguishing a not aflame fire source: instead say "[The noun] is not aflame."
 
-Carry out an actor extinguishing a fire source: now the noun is not alight.
+Carry out an actor extinguishing a fire source: now the noun is not aflame.
 
 After an actor extinguishing a fire source (this is the after extinguishing a fire source rule): say "[The noun] goes out."
 
 Chapter - Burning
 
-Every turn when a fire source is alight:
-	Repeat with fs running through alight fire sources:
+Every turn when a fire source is aflame:
+	Repeat with fs running through aflame fire sources:
 		Decrease the remaining turns lit of fs by 1;
 		If the remaining turns lit of fs is less than 0:
 			Now the remaining turns lit of fs is 0;
@@ -48,15 +48,15 @@ Check an actor lighting a lighter: If the noun is not full, instead say "[The no
 
 Section - Safety Matches
 
-[Example 407 -  The Cow Exonerated in the Inform 7 Recipe Book contains an implementation similar to mine that I found after writing this. It points out that "matches" is problematic; I went with "safety match" instead of their solution.]
+[Example 407 -  The Cow Exonerated in the Inform 7 Recipe Book contains an implementation similar to mine that I found after writing this. It points out that "matches" is problematic; I went with "wooden match" instead of their solution.]
 
-A safety match is a kind of fire source. The description is usually "A wooden stick with a phosphorus tip." The printed name of a safety match is "match". A safety match is privately-named. Understand "match" as a safety match. 
+A wooden match is a kind of fire source. The description is usually "A wooden stick with a phosphorus tip." The printed name of a wooden match is "match". A wooden match is privately-named. Understand "match" as a wooden match. 
 
-A safety match can be burnt out. It is usually not burnt out. A safety match has a text called the burnt out description. The burnt out description is usually "This blackened wooden stick was once a lit match.".
+A wooden match can be burnt out. It is usually not burnt out. A wooden match has a text called the burnt out description. The burnt out description is usually "This blackened wooden stick was once a lit match.".
 
-Check an actor lighting a safety match: If the noun is burnt out, instead say "[The noun] is burnt out and thus cannot be lit."
+Check an actor lighting a wooden match: If the noun is burnt out, instead say "[The noun] is burnt out and thus cannot be lit."
 
-After an actor extinguishing a safety match: if the burnt out description of the noun is not empty, now the description of the noun is the burnt out description of the noun; now the noun is burnt out; abide by the after extinguishing a fire source rule.
+After an actor extinguishing a wooden match: if the burnt out description of the noun is not empty, now the description of the noun is the burnt out description of the noun; now the noun is burnt out; abide by the after extinguishing a fire source rule.
 
 Part - Smoking
 
@@ -84,4 +84,4 @@ Part - Example
 
 The Smoking Room is a room.
 
-The player carries a lighter and a safety match. The player carries a cigarette, a cigar and a pipe.
+The player carries a lighter and a wooden match. The player carries a cigarette, a cigar and a pipe.
