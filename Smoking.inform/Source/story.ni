@@ -46,11 +46,11 @@ Part - Flame-Consumable, Burnt-out
 
 A burnable can be flame-consumable. A burnable is usually not flame-consumable.
 
-A burnable can be burnt-out. A burnable is usually not burnt-out. A burnable has a text called the burnt-out description. The burnt-out description is usually "[The noun] is burnt out."
+A burnable can be burnt out. A burnable is usually not burnt out. A burnable has a text called the burnt out description. The burnt out description is usually "[The noun] is burnt out."
 
-Check an actor burning a burnable: If the noun is burnt-out, instead say "[The noun] is burnt out and thus cannot be lit."
+Check an actor burning a burnable: If the noun is burnt out, instead say "[The noun] is burnt out and thus cannot be lit."
 
-After an actor extinguishing a flame-consumable burnable: if the burnt-out description of the noun is not empty, now the description of the noun is the burnt-out description of the noun; now the noun is burnt-out.
+After an actor extinguishing a flame-consumable burnable: if the burnt out description of the noun is not empty, now the description of the noun is the burnt out description of the noun; now the noun is burnt out.
 
 Part - Common Fire Sources
 
@@ -68,7 +68,7 @@ Chapter - Safety Matches
 
 [Example 407 -  The Cow Exonerated in the Inform 7 Recipe Book contains an implementation similar to mine that I found after writing this. It points out that "matches" is problematic; I went with "wooden match" instead of their solution.]
 
-A wooden match is a kind of ignition source. A wooden match is privately-named and flame-consumable. The description is usually "A wooden stick with a phosphorus tip." The burnt-out description is usually "This blackened wooden stick was once a lit match." The printed name of a wooden match is "match". Understand "match" as a wooden match.
+A wooden match is a kind of ignition source. A wooden match is privately-named and flame-consumable. The description is usually "A wooden stick with a phosphorus tip." The burnt out description is usually "This blackened wooden stick was once a lit match." The printed name of a wooden match is "match". Understand "match" as a wooden match.
 
 Book - Smoking
 
@@ -94,7 +94,7 @@ Part - Common Smokables
 
 Chapter - Smoking Tubes
 
-A smoking tube is a kind of smokable. It is flame-consumable. The burnt-out description is usually "This is a nondescript [noun] butt."
+A smoking tube is a kind of smokable. It is flame-consumable. The burnt out description is usually "This is a nondescript [noun] butt."
 
 A cigarette is a kind of smoking tube. The description is usually "This long paper cylinder contains tobacco." 
 
