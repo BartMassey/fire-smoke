@@ -12,7 +12,7 @@ A burnable has a number called the aflame turn duration. The aflame turn duratio
 
 A burnable has a text called the aflame description. The aflame description is usually "A bright, smoky flame issues from [the noun]."
 
-After examining an aflame burnable: say the aflame description of the noun.
+After an actor examining an aflame burnable: say the aflame description of the noun.
 
 Part - Ignition Sources
 
@@ -141,7 +141,7 @@ The yellow lighter is a lighter. The clay pipe is a pipe.
 
 Bob is a man in the smoking room. The description is "Looks like Bob is a smoker." Bob carries the clay pipe and the yellow lighter.
 
-After examining Bob: try Bob smoking the clay pipe.
+After an actor examining Bob: try Bob smoking the clay pipe.
 
 Every turn when Bob is carrying an aflame smokable (called the target smokable): try Bob smoking the target smokable.
 
