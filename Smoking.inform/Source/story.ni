@@ -4,13 +4,13 @@
 
 Book - Burnables
 
-[ TODO: Make aflame burnables act as light sources by default. Report state changes only for visible things. Get Bob smoking. Be able to smoke a hookah. Move from turns to time for durations. ]
+[ TODO: Make aflame burnables act as light sources by default. Report state changes only for visible things. Be able to smoke a hookah. Move from turns to time for durations. Fix pipe disambiguation bugs. Get rid of Bob smoking twice the first turn. ]
 
 A burnable is a kind of thing. A burnable can be aflame. It is usually not aflame.
 
 A burnable has a number called the aflame turn duration. The aflame turn duration is usually 3. A burnable has a number called the remaining turns aflame.
 
-A burnable has a text called the aflame description. The aflame description is usually "A bright, smoky flame issues from [the noun]."
+A burnable has a text called the aflame description. The aflame description is usually "[conditional paragraph break]A bright, smoky flame issues from [the noun]."
 
 After an actor examining an aflame burnable: say the aflame description of the noun.
 
@@ -18,13 +18,17 @@ Part - Ignition Sources
 
 An ignition source is a kind of burnable. Understand "strike [ignition source]" as burning.
 
+To say lighting (the target burnable - a burnable):  say "[if the person asked is the player](lighting [the target burnable])[command clarification break][otherwise][The person asked] lights [the target burnable]. [run paragraph on][end if]".
+
 Part - Burning a Burnable
 
 Understand "burn [burnable]" or "light [burnable]" or "ignite [burnable]" as burning.
 
-Check an actor burning an object when the noun is not burnable: instead say "One does not burn [the noun]."
+Check an actor burning an object when the noun is not a burnable: instead say "One does not burn [the noun]."
 
-Check an actor burning an object when the actor does not carry an aflame ignition source: instead say "To burn [the noun] requires something to set it burning with."
+Check an actor burning a burnable when the noun is aflame: instead say "[The noun] is already lit."
+
+Check an actor burning a burnable when the noun is not an ignition source and the actor does not carry an aflame ignition source: instead say "To burn [the noun] requires something with which to set it alight."
 
 Carry out an actor burning a burnable: now the noun is aflame; now the remaining turns aflame of the noun is one plus the aflame turn duration of the noun.
 
@@ -64,7 +68,7 @@ After an actor extinguishing a flame-consumable burnable: if the burnt out descr
 
 Chapter - Implicit Ignition
 
-Before an actor burning a burnable when the actor is carrying a not burnt out ignition source and the actor is not carrying an aflame ignition source and the noun is not an ignition source: let i be a random not burnt out ignition source carried by the actor; say "([the actor] lighting [the i])[command clarification break]"; try burning i.
+Before an actor burning a burnable when the actor is carrying a not burnt out ignition source and the actor is not carrying an aflame ignition source and the noun is not an ignition source: let i be a random not burnt out ignition source carried by the actor; say lighting i; try the actor burning i.
 
 Chapter - Common Ignition Sources
 
@@ -107,7 +111,7 @@ Carry out an actor smoking a smokable: say the smoking description of the noun.
 
 Part - Implicitly Lighting Up Before Smoking
 
-Before an actor smoking a smokable when the noun is not aflame  (this is the implicit lighting up before smoking rule): say "([the actor] lighting [the noun])[command clarification break]"; try burning the noun. 
+Before an actor smoking a smokable when the noun is not aflame  (this is the implicit lighting up before smoking rule): say lighting the noun; try the actor burning the noun. 
 
 Part - Common Smokables
 
@@ -147,4 +151,4 @@ Every turn when Bob is carrying an aflame smokable (called the target smokable):
 
 Part - Testing - Not for publication
 
-Test me with "drop all / rules / x Bob".
+Test me with "x Bob / smoke".
