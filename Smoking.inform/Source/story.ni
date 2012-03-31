@@ -1,6 +1,9 @@
 "Smoking" by "Bart Massey"
 
-[ This is really two extensions glommed together for now. The first handles burning in general, the second handles smoking. ]
+[ Copyright © 2012 Bart Massey]
+[ Released under the Creative Commons Attribution 3.0 United States license: http://creativecommons.org/licenses/by/3.0/us/ ]
+
+[ This is really two extensions glommed together for now, and not yet split out from a simple story. The first handles burning in general, the second handles smoking. ]
 
 Book - Burnables
 
